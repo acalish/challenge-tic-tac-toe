@@ -9,6 +9,7 @@ const alternateUser = function () {
   } else {
     currentUser = 'X'
   }
+  return currentUser
 }
 
 const updateGame = function () {
@@ -16,7 +17,7 @@ const updateGame = function () {
     if (gameArray[event.target.id] === '') {
       gameArray[event.target.id] = currentUser
       $(event.target).text(currentUser)
-      alternateUser()
+      currentUser = alternateUser(currentUser)
     }
   })
 }
@@ -26,3 +27,7 @@ const playGame = function () {
 }
 
 playGame()
+
+module.exports = {
+  alternateUser
+}
