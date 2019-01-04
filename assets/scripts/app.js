@@ -29,5 +29,6 @@ const playGame = function () {
 playGame()
 
 module.exports = {
-  alternateUser
+  alternateUser,
+  currentUser
 }
